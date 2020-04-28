@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日疫情</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .app-control{
+            height: 30px;
+            border: 1px solid whitesmoke;
+            -webkit-app-region : drag;
+            display: grid;
+            place-items: center;
+            color:midnightblue;
+        }
+        .container{
+            flex:1;
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            text-align: center;
+            margin: 0;
+            color: mediumaquamarine;
+        }
+        #title{
+            font-size: 20vmin;
+        }
+        #number{
+            font-size: 30vmin;
+            color: mediumturquoise;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="app-control">今日疫情</div>
+    <div class="container">
+        <div>
+            <h1 class='title'>今日新增</h1>
+            <h1 class="number">0</h1>
+        </div>
+    </div>
+    
+
+    <script>
+        fetch('https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=317599664480')
+        .then(res=>res.json())
+        .then(data => {
+            console.log(data)
+        })
+    </script>
+
+</body>
+</html>

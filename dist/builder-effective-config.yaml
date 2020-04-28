@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+electronDownload:
+  mirror: 'https://npm.taobao.org/mirrors/electron/'
+productName: 今日疫情
+appId: com.yokiijay.disease
+win:
+  icon: build/lu.ico
+  target:
+    - target: nsis
+electronVersion: 8.2.4
